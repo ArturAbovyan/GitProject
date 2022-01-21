@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Bank card</title>
+</head>
+<body>
+    <div class="form">
+    <div class="card">
+        <div id="card-front">
+            <div id="number"><span id="num1">####</span> <span id="num2">####</span> <span id="num3">####</span> <span id="num4">####</span></div>
+            <div id="card_type"></div>
+            <div id="card_expires">
+                Expires<br>
+              <span id="expires_style"><span id="month">MM</span>/<span id="year">YY</span></span>  
+            </div>
+            <div id="card_holder">
+                Card Holder<br>
+                <span id="name"></span>
+            </div>
+        </div>
+        <div id="card-back">
+            <div id="cvv"></div>
+        </div>
+    </div>
+    <form action="" class="form-body">
+        <label for="input_number" id="abc1" @keydown="if( ['+','-','e'].includes( $event.key ) ) $event.preventDefault()">Card Number</label><br>
+    <input type="text" id="input_number" maxlength="19"><br>
+    <label for="input_holder" id="abc2">Card Name</label><br>
+    <input type="text" id="input_holder" maxlength="22"><br>
+    <label for="yaer" id="abc3">Expiration Date</label>
+    <label for="input_cvv" id="abc4">CVV</label><br>
+    <select name="year" id="year_input">
+  <option value="YY">Year</option>
+  <option value="30">2030</option>
+  <option value="29">2029</option>
+  <option value="28">2028</option>
+  <option value="27">2027</option>
+  <option value="26">2026</option>
+  <option value="25">2025</option>
+  <option value="24">2024</option>
+  <option value="23">2023</option>
+  <option value="22">2022</option>
+  <option value="21">2021</option>
+    </select>
+    <select name="month" id="month_input">
+        <option value="MM">Month</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    
+<input type="text" id="input_cvv" maxlength="4">
+<button type="submit" id="btn">Submit</button>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

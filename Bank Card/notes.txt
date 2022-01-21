@@ -1,0 +1,53 @@
+number.addEventListener("input", ()=>{
+   
+    if(number.value != "" && number.value.length != l){
+      if(i==4){
+        vandak.innerText[i] = " ";
+      }
+    if(i!=4){var z = vandak.innerText.replace(vandak.innerText[i], number.value.toString()[i]);
+    vandak.innerText = z;
+    if(i==3){
+        number.value =  number.value + " "
+        i++
+      }
+    }
+    if(i==9){
+        vandak.innerText[i] = " ";
+      }
+    if(i!=9){var z = vandak.innerText.replace(vandak.innerText[i], number.value.toString()[i]);
+    vandak.innerText = z;
+    if(i==8){
+        number.value =  number.value + " "
+        i++
+      }
+    }
+    if(i==14){
+        vandak.innerText[i] = " ";
+      }
+    if(i!=14){var z = vandak.innerText.replace(vandak.innerText[i], number.value.toString()[i]);
+    vandak.innerText = z;
+    if(i==13){
+        number.value =  number.value + " "
+        i++
+      }
+    }
+    i++;
+}
+l++
+if(vandak.innerText[0]==3){
+    let img = document.getElementById("card_type");
+    img.style.backgroundImage = "url('img/american.png')";
+}
+if(vandak.innerText[0]==4){
+    let img = document.getElementById("card_type");
+    img.style.backgroundImage = "url('img/visapng.png')";
+}
+if(vandak.innerText[0]==5){
+    let img = document.getElementById("card_type");
+    img.style.backgroundImage = "url('img/master.png')";
+}
+if(vandak.innerText[0]==6){
+    let img = document.getElementById("card_type");
+    img.style.backgroundImage = "url('img/discover.png')";
+}
+})
